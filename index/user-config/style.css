@@ -1,0 +1,194 @@
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            display: grid;
+            place-items: center;
+            height: 100vh;
+            padding: 30px;
+            background: lightgray;
+        }
+
+        .container {
+          flex-direction: row;
+            display: flex;
+            background: white;
+            overflow: hidden;
+            max-width: 650px;
+            width: 100%;;
+            flex-direction:row; 
+        }
+
+        .profile {
+            padding: 20px;
+            text-align: center;
+            flex: 1;
+            background-color: #07244C;
+        }
+
+        .profile p {
+            color: white;
+        }
+
+        .profile h2 {
+            margin-top: 0.5rem;
+            overflow: hidden;
+            white-space: nowrap; 
+            margin: 0 auto;
+            animation: typing 5s infinite;
+            color: #f3961c;
+        }
+
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+
+        .profile-pic {
+            width: 123px;
+            height: 120px;
+            border-radius: 50%;
+            margin-top: 3rem;
+        }
+
+        .form-container {
+            padding: 20px;
+            flex: 1;
+        }
+
+        .form-container h2 {
+            margin-bottom: 1rem;
+            text-align: left;
+            font-weight: bold;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #07244C;
+            font-size: 13px;
+            font-weight: 500;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-top: 0.5rem;
+        }
+
+        .field-icon {
+            float: right;
+            margin-left: -23px;
+            margin-top: 12px;
+            margin-right: 2px;
+            position: relative;
+            z-index: 1;
+            color: dimgray;
+        }
+
+        .account {
+            text-align: center;
+            margin-top: 0.4rem;
+            font-size: 12px;
+        }
+
+        button:hover {
+            background-color: #f3961c;
+            color: black;
+        }
+        
+        #error-msg {
+            color: darkred;
+            text-align: center;
+            font-size: 13px;
+        }
+        #correctMsg{
+            color: green;
+            text-align: center;
+            font-size: 13px;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+            transform: translate3d(0,80px,0)
+        }
+
+            to {
+            transform: translate3d(0,0,0);
+            opacity: 1
+        }
+     }
+
+        @-webkit-keyframes fadeInUp {
+            from {
+            transform: translate3d(0,80px,0)
+        }
+
+           to {
+          transform: translate3d(0,0,0);
+           opacity: 0
+        }
+      }
+
+        .container{
+            animation-duration: 1s;
+            animation-fill-mode: both;
+            -webkit-animation-duration: 1s;
+            -webkit-animation-fill-mode: both
+        }
+        .container{
+             opacity: 0;
+      }
+
+        .container{
+              opacity: 0;
+              animation-name: fadeInUp;
+             -webkit-animation-name: fadeInUp;
+      }
+      
+         @media (max-width:768px) {
+            .container  {
+               max-width: 100%;
+               flex-direction:column;
+            } 
+            
+            .profile {
+                text-align: center;
+                margin-top: 1rem;
+            }
+            .profile-pic {
+                margin: auto;
+            }
+            .account{
+            	font-size: 15px;
+            }
+            .login-form {
+                padding: 25px;
+            }
+            #error-msg {
+            font-size: 16px;
+           }
+        }
+        

@@ -1,1 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css'>
+    <link rel="stylesheet" href="style.css">
+    <title>Login and Registration Form</title>
+</head>
+<body>
+    <div class="container">
+        <div class="form-container" id="login-container">
+            <h2>Login</h2>
+            <form id="login-form">
+                <div class="form-group">
+                    <label for="login-username">Full name</label>
+                    <input type="text" placeholder="Enter your Full name" id="login-username" required>
+                </div>
+                <div class="form-group">
+                    <label for="login-password">Password</label>
+                    <input type="password" placeholder="Enter your password" id="login-password" required>
+                    <span toggle="#login-password" class="fa fa-fw fa-eye field-icon toggle-password"></span>
+                </div>
+                <button type="submit" id="login-btn">Login</button>
+                <p id="success-msg"></p>
+                <p id="error-msg"></p>
+                <div class="account">Don't have an account? <a href="#" id="show-register">Register</a></div>
+            </form>
+        </div>
 
+        <div class="form-container" id="register-container" style="display: none;">
+            <h2>Register Here</h2>
+            <form id="register-form">
+                <div class="form-group">
+                    <label for="register-username">Full name</label>
+                    <input type="text" placeholder="Enter your Full name" id="register-username" required>
+                </div>
+                <div class="form-group">
+                    <label for="register-password">Password</label>
+                    <input type="password" placeholder="Enter your password" id="register-password" required>
+                    <span toggle="#register-password" class="fa fa-fw fa-eye field-icon toggle-password"></span>
+                </div>
+                <button type="submit" id="register-btn">Register</button>
+                <p id="success-msg"></p>
+                <p id="error-msg-register"></p>
+                <div class="account">Already have an account? <a href="#" id="show-login">Login</a></div>
+            </form>
+        </div>
+
+        <div class="profile">
+            <img src="/PERSONAL_PORTFOLIO_LOGIN/user-config/img/giphy.gif" alt="Profile Picture" class="profile-pic">
+            <h2 id="login-header">Welcome User!</h2>
+            <h2 id="register-header" style="display:none;">Register Now!</h2>
+            <p id="login-paragraph">This is my personal portfolio. Please log in to access.</p>
+            <p id="register-paragraph" style="display: none;">Create your account to explore my personal portfolio.</p>
+        </div>
+    </div>
+    
+    <!--Script Link-->
+<script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script>
+</script>
+<script src="TogglePassword.js"></script>
+<script src="LoginUser.js"></script>
+<script src="StyleRegister.js"> </script>
+<script src="auth.js"> </script>
+<script src="viewSwitcher.js"> </script>
+</body>
+</html>
